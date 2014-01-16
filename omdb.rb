@@ -24,7 +24,7 @@ post '/result' do
 
   result = JSON.parse(response.body)
 
-    
+ 
   # puts @result["Search"].each {|movies_hash|
   # puts "#{movies_hash['Title']} - #{movies_hash['year']}."}
 
@@ -33,7 +33,7 @@ post '/result' do
   html_str = "<html><head><title>Movie Search Results</title></head><body><Table><h1>Movie Results</h1>\n<th align=right>YEAR</th><th align=left>&nbsp;&nbsp;TITLE</th>"
   
   result["Search"].each {|movies_hash|
-    html_str += "<tr><td align=right>#{movies_hash['Year']}&nbsp;&nbsp;</td> <td>&nbsp;&nbsp;#{movies_hash['Title']} </td></tr>"
+    html_str += "<tr><td align=right>#{movies_hash['Year']}&nbsp;&nbsp;</td> <td>&nbsp;&nbsp;#{movies_hash['Title']} </td><td>#{movies_hash['imdbID']}</tr>"
   }
 
   html_str += "</table></body></html>"
