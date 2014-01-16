@@ -34,7 +34,7 @@ post '/result' do
    #sort HASH before iteration!!!!!!
 
   result["Search"].map {|movies_hash|
-    html_str += "<tr><td align=right>#{movies_hash['Year']}&nbsp;&nbsp;</a></td><td><a href='/poster/#{movies_hash['imdbID']}'>&nbsp;&nbsp;#{movies_hash['Title']} </td></tr>"
+    html_str += "<tr><td align=right>#{movies_hash['Year']}&nbsp;&nbsp;</a></td><td><a href=\"/poster/#{movies_hash['imdbID']}\">&nbsp;&nbsp;#{movies_hash['Title']} </td></tr>"
   }
 
   html_str += "</table></body></html>"
